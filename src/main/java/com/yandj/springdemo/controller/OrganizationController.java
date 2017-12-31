@@ -24,7 +24,7 @@ public class OrganizationController {
 		return "location";
 	}
 
-	// test
+	// test test
 	@RequestMapping(value = "/getOrgList")
 	public String listOrganization(Model model) {
 		List<Organization> orgs = organizationService.getOrgList();
