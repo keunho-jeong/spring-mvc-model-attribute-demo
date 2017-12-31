@@ -13,20 +13,20 @@ import com.yandj.springdemo.service.OrganizationService;
 
 @Controller
 public class OrganizationController {
-	
+
 	final static Logger log = Logger.getLogger(OrganizationController.class);
-	
+
 	@Autowired
 	private OrganizationService organizationService;
-	
-	@RequestMapping(value="/getLocation")
-	public String addLocation(){
+
+	@RequestMapping(value = "/getLocation")
+	public String addLocation() {
 		return "location";
 	}
-	
 
-	@RequestMapping(value="/getOrgList")
-	public String listOrganization(Model model){
+	// test
+	@RequestMapping(value = "/getOrgList")
+	public String listOrganization(Model model) {
 		List<Organization> orgs = organizationService.getOrgList();
 		model.addAttribute("orgList", orgs);
 		log.debug("call /getOrgList " + orgs);
